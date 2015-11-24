@@ -8,8 +8,8 @@ RUN         apt-get update -y && \
 VOLUME      /var/lib/graphite/whisper
 
 COPY        docker-entrypoint.sh /
-COPY        cache.conf /etc/carbon/cache.conf
-COPY        relay.conf /etc/carbon/relay.conf
+COPY        config/cache.conf /etc/carbon/cache.conf
+COPY        config/relay.conf /etc/carbon/relay.conf
 
 ENTRYPOINT  ["/docker-entrypoint.sh"]
 
