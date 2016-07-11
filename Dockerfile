@@ -5,7 +5,7 @@ RUN         apt-get update -y && \
             apt-get install -y graphite-carbon && \
             echo "CARBON_CACHE_ENABLED=true" > /etc/default/graphite-carbon         
 
-VOLUME      /var/lib/graphite/whisper
+VOLUME      /var/lib/graphite
 
 COPY        docker-entrypoint.sh /
 COPY        config/cache.conf /etc/carbon/cache.conf
